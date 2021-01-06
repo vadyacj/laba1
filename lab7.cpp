@@ -1,4 +1,4 @@
-﻿/*Даны натуральное число n и символы s1,…,sn. Строку s1,…,sn обработать так,
+/*Даны натуральное число n и символы s1,…,sn. Строку s1,…,sn обработать так,
 чтобы все слова, состоящие только из цифр, были удалены, их сумма стояла последним словом в строк*/
 #include <stdio.h>
 #include <conio.h>
@@ -20,9 +20,29 @@ int main()
 			*(str + i) = '\0';
 	printf("\nИсходная строка символов : %s", str);
 	for (i = 0; *(str + i) != '\0'; i++) {
-		if (str[i] == '1' || str[i] == '0' || str[i] == '2' || str[i] == '3' || str[i] == '4' || str[i] == '5' || str[i] == '6' || str[i] == '7' || str[i] == '8' || str[i] == '9') {
-			int ia = (int)str[i];
-			sum += ia - 48;
+		if (str[i] == '1' || str[i] == '0' || str[i] == '2' || str[i] == '3' || str[i] == '4' || str[i] == '5' || str[i] == '6' || str[i] == '7' || str[i] == '8' || str[i] == '9') 
+		{
+            if (str[i] == '1')
+                sum += 1;
+            else if (str[i] == '2')
+                sum += 2;
+            else if (str[i] == '3')
+                sum += 3;
+            else if (str[i] == '4')
+                sum += 4;
+            else if (str[i] == '5')
+                sum += 5;
+            else if (str[i] == '6')
+                sum += 6;
+            else if (str[i] == '7')
+                sum += 7;
+            else if (str[i] == '8')
+                sum += 8;
+            else if (str[i] == '9')
+                sum += 9;
+            else if (str[i] == '0')
+                sum += 0;
+
 			str[i] = ' ';
 		}
 	}
